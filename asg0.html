@@ -1,0 +1,74 @@
+<!-- Veronica Vasquez Hernandez -->
+<!-- vejavasq@ucsc.edu -->
+<!-- Notes to Grader: No notes -->
+
+
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <title> Draw a blue rectangle (canvas verison)</title>
+    </head>
+
+    <body onload = "main()">
+        <!-- P1 canvas -->
+        <!-- <canvas id="example" width="200" height="150"> -->
+
+        <!-- Current canvas -->
+        <canvas id="example" width="400" height="400">
+            Please use a browser that support "canvas"
+        </canvas>
+
+        <!-- The input v1 x, y -->
+        <br>
+        <label for="v1x"> v1: x </label>
+        <input type="text" id="v1x" name="v1x" required minlength="4" maxlength="8" size="10" />
+
+        <label for="v1y"> y </label>
+        <input type="text" id="v1y" name="v1y" required minlength="4" maxlength="8" size="10" />
+
+        <!-- The input v2 x, y -->
+        <br>
+        <label for="v2x"> v2: x </label>
+        <input type="text" id="v2x" name="v2x" required minlength="4" maxlength="8" size="10" />
+
+        <label for="v2y"> y </label>
+        <input type="text" id="v2y" name="v2y" required minlength="4" maxlength="8" size="10" />
+
+        <!-- The button "Draw" -->
+        <br>
+        <input class="styled" type="button" value="Draw" onclick="handleDrawEvent()"/>
+
+
+
+        <!-- The select options for operations -->
+        <br><br>
+        <label for="operations">Operation: </label>
+        <select name="operation" id="operations">
+            <option value="Add">Add</option>
+            <option value="Sub">Subtract</option>
+            <option value="Mul">Multiply</option>
+            <option value="Div">Division</option>
+            <option value="Angl">Angle Between</option>
+            <option value="Area">Area</option>
+            <option value="Mag">Magnitude</option>
+            <option value="Nor">Normalize</option>
+        </select>
+
+        <!-- The Scalar -->
+        <label for="scalar"> Scalar: </label>
+        <input type="text" id="scalar" name="scalar" required minlength="4" maxlength="8" size="10" />
+
+        <!-- The button "Draw" -->
+        <br>
+        <input class="styled" type="button" value="Draw" onclick="handleDrawOperationEvent()"/>
+
+
+
+        <!-- load the lib directory library -->
+        <script src="lib/cuon-matrix-cse160.js"></script>
+
+        <!-- loading the js script -->
+        <script src="asg0.js"></script>
+    </body>
+</html>
